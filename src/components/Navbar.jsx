@@ -90,7 +90,7 @@ export default function Navbar() {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow-2xl bg-base-100 rounded-box w-56 border border-base-300"
               >
-                <div className="px-4 py-3 border-b border-base-200 mb-2">
+                <div className="px-4 py-3 mb-2">
                   <p className="font-bold text-base truncate">{session.user.name}</p>
                   <p className="text-xs opacity-60 truncate">{session.user.email}</p>
                 </div>
@@ -105,8 +105,27 @@ export default function Navbar() {
                 </li>
 
                 {/* Mobile-only Logout */}
-                <li className="sm:hidden border-t border-base-200 mt-1">
-                  <button onClick={handleLogout} className="text-error">Logout</button>
+                <li className="sm:hidden">
+                  <button
+                    onClick={handleLogout}
+                    className="btn mt-5 text-error flex items-center gap-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                      />
+                    </svg>
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>

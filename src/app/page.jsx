@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Trending Section */}
       <section
-        className="relative py-20 border-y border-gray-200 bg-cover bg-center bg-no-repeat"
+        className="relative py-20 border-y border-gray-200 bg-cover bg-center bg-no-repeat rounded-xl"
         style={{ backgroundImage: `url('/img/bg1.png')` }}
       >
         <div className="absolute inset-0 bg-white/75"></div>
