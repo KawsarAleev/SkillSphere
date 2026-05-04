@@ -1,6 +1,6 @@
 "use client";
 import CourseCard from "@/components/CourseCard";
-import { courses } from "@/data/courses";
+import courses from "@/data/courses.json";
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 

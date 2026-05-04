@@ -1,7 +1,7 @@
 "use client";
 import CourseCard from "@/components/CourseCard";
 import Hero from "@/components/Hero";
-import { courses } from "@/data/courses";
+import courses from "@/data/courses.json";
 import { FaChalkboardTeacher, FaGraduationCap } from "react-icons/fa";
 
 export default function Home() {

@@ -1,5 +1,5 @@
 "use client";
-import { courses } from "@/data/courses";
+import courses from "@/data/courses.json";
 import { authClient } from "@/lib/auth-client";
 import { usePathname, useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react";
