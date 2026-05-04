@@ -6,13 +6,13 @@ export default function CourseCard({ course }) {
   return (
     <div className="bg-white border border-gray-200 group transition-all duration-200 hover:border-primary">
       <div className="aspect-video overflow-hidden">
-        <img
-          src={course.image}
-          alt=""
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        <img 
+          src={course.image} 
+          alt="" 
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
         />
       </div>
-
+      
       <div className="p-5">
         <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-2 block">
           {course.category}
@@ -23,11 +23,11 @@ export default function CourseCard({ course }) {
         <p className="text-gray-500 text-sm line-clamp-2 mb-4">
           {course.description}
         </p>
-
+        
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
           <div className="flex items-center gap-3">
-            <img
-              src={course.instructorImage}
+            <img 
+              src={course.instructorImage} 
               alt={course.instructor}
               className="w-8 h-8 rounded-full object-cover border border-gray-100"
             />
@@ -38,8 +38,8 @@ export default function CourseCard({ course }) {
             {course.rating}
           </div>
         </div>
-
-        <Link
+        
+        <Link 
           href={`/courses/${course.id}`}
           className="mt-5 block w-full text-center py-3 border-2 border-primary text-primary font-bold uppercase text-xs hover:bg-primary hover:text-white transition-colors"
         >
