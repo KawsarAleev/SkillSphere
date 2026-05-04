@@ -1,29 +1,31 @@
 "use client";
+import CourseCard from "@/components/CourseCard";
 import Hero from "@/components/Hero";
+import { courses } from "@/data/courses";
+import { FaGraduationCap } from "react-icons/fa";
 
 export default function Home() {
+  const topCourses = [...courses].sort((a, b) => b.rating - a.rating).slice(0, 3);
+
   return (
     <div className="flex flex-col gap-20 pb-20">
       <Hero />
-      <section className="bg-base-200 p-10 rounded-xl text-center">
-        <h2 className="text-4xl font-black uppercase mb-4">Start Your Learning Journey</h2>
-        <p className="text-xl opacity-70 mb-8 max-w-2xl mx-auto font-medium">
-          SkillSphere provides industry-leading courses designed to help you master 
-          new skills and advance your career.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 shadow-sm border-t-4 border-primary">
-            <h3 className="font-bold text-lg mb-2 uppercase">Expert Mentors</h3>
-            <p className="text-sm opacity-70 font-medium">Learn from industry veterans with years of experience.</p>
+
+      <section className="mx-auto w-full">
+        <div className="mb-10 flex flex-col gap-2">
+          <div className="flex items-center gap-3">
+            <FaGraduationCap className="text-primary text-3xl" />
+            <h2 className="text-3xl font-bold uppercase tracking-tight">Popular Courses</h2>
           </div>
-          <div className="bg-white p-8 shadow-sm border-t-4 border-primary">
-            <h3 className="font-bold text-lg mb-2 uppercase">Lifetime Access</h3>
-            <p className="text-sm opacity-70 font-medium">Buy once, learn forever. No subscription required.</p>
-          </div>
-          <div className="bg-white p-8 shadow-sm border-t-4 border-primary">
-            <h3 className="font-bold text-lg mb-2 uppercase">Project Based</h3>
-            <p className="text-sm opacity-70 font-medium">Apply theory by building real-world applications.</p>
-          </div>
+          <p className="text-gray-500 font-medium text-sm border-l-4 border-primary pl-3">
+            Explore our highest rated programs and start learning today
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {topCourses.map(course => (
+            <CourseCard key={course.id} course={course} />
+          ))}
         </div>
       </section>
     </div>
